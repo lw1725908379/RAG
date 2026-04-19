@@ -1,0 +1,22 @@
+{
+  "atoms": [
+    {
+      "module": "通道引擎对接",
+      "function_id": "F-01",
+      "function_name": "车辆闸前/中倒车",
+      "business_logic": "针对倒车事件进行检测及后续记录闭环",
+      "trigger_condition": "车辆在道闸前/中倒车",
+      "rules": ["先有驶离通知再倒车", "只有倒车事件按现有逻辑处理"],
+      "tags": ["通道引擎", "倒车", "闸前", "闸后"]
+    },
+    {
+      "module": "通道引擎对接",
+      "function_id": "F-02",
+      "function_name": "逆行入场事件",
+      "business_logic": "对接下位机上传的逆行入场事件",
+      "trigger_condition": "车辆从出口逆行入场",
+      "rules": ["逆行入场事件上传天启", "触发超眸录像"],
+      "tags": ["通道引擎", "逆行", "入场"]
+    }
+  ]
+}

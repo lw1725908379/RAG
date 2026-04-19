@@ -1,0 +1,54 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \":*)",
+      "Bash(python test/test_cross_kb.py)",
+      "Bash(python test/comprehensive_test.py)",
+      "Read(//e/projs/codes/rag_20260401/rag/**)",
+      "Bash(curl -s http://localhost:5000/ -o /dev/null)",
+      "Bash(curl -s -X POST http://localhost:5000/api/chat -H 'Content-Type: application/json' -d '{\"message\": \"如何测试jielink登录功能？\"}')",
+      "Bash(curl -s -X POST http://localhost:5000/api/chat -H 'Content-Type: application/json' -d '{\"query\": \"如何测试jielink登录功能？\"}')",
+      "Bash(curl -s http://localhost:5000/ -o /dev/null -w \"%{http_code}\")",
+      "Bash(pkill -f \"python.*app.py\")",
+      "Bash(curl -s -X POST http://localhost:5000/api/chat -H 'Content-Type: application/json' -d '{\"query\": \"如何测试jielink登录？\"}')",
+      "Bash(curl -v -X POST http://localhost:5000/api/chat -H 'Content-Type: application/json' -d '{\"query\": \"test\"}')",
+      "Bash(curl -X POST \"http://localhost:5000/api/chat\" --header \"Content-Type: application/json\" --data '{\"query\":\"test\"}')",
+      "Bash(curl -X POST \"http://localhost:5000/api/chat\" --header \"Content-Type: application/json\" --data '{\"query\":\"如何测试jielink登录？\"}')",
+      "Bash(python -c ':*)",
+      "Bash(taskkill //F //IM python.exe)",
+      "Bash(rm -rf test tests docs scripts src console.log .env)",
+      "Bash(rm -f logs/*.log)",
+      "Bash(rm -rf models/text2vec-base-chinese)",
+      "Read(//e/projs/codes/rag_20260402/rag/**)",
+      "Bash(curl -s http://localhost:5000/api/tool/health)",
+      "Bash(curl -s http://localhost:5000/api/metrics)",
+      "Bash(curl -s http://localhost:5000/api/agent/react -X POST -H \"Content-Type: application/json\" -d '{\"query\": \"如何测试跟车？\"}')",
+      "Bash(curl -s http://localhost:5000/api/cache/clear -X POST)",
+      "Bash(netstat -ano)",
+      "Bash(findstr :5000)",
+      "Bash(taskkill //F //PID 19116)",
+      "Bash(taskkill //F //PID 13852)",
+      "Bash(curl -s -X POST http://localhost:5000/api/agent/react -H \"Content-Type: application/json\" -d \"{\\\"query\\\":\\\"智慧停车是什么\\\"}\")",
+      "Bash(curl -s -X POST http://localhost:5000/api/agent/react -H \"Content-Type: application/json\" -d \"{\\\"query\\\":\\\"智慧停车是什么\\\",\\\"max_steps\\\":3,\\\"session_id\\\":\\\"test123\\\"}\")",
+      "Bash(curl -s http://localhost:5000/api/logs)",
+      "Bash(curl -s http://localhost:5000/api/chat -H \"Content-Type: application/json\" -d \"{\\\"message\\\":\\\"智慧停车是什么\\\",\\\"mode\\\":\\\"pipeline\\\"}\")",
+      "Bash(python -c \"import requests; r = requests.get\\('http://localhost:5000/api/metrics'\\); print\\(r.json\\(\\)\\)\")",
+      "Bash(curl -s -X POST http://localhost:5000/api/agent/react -H \"Content-Type: application/json\" -d \"{\\\"query\\\": \\\\\"智慧停车是什么\\\\\", \\\\\"max_steps\\\\\": 2, \\\\\"session_id\\\\\": \\\\\"test123\\\\\"}\")",
+      "Bash(python benchmark_full.py)",
+      "Bash(curl -s -X POST http://localhost:5000/api/mcp/generate-test-strategy-async -H 'Content-Type: application/json' -d '*:*)",
+      "Bash(curl -s http://localhost:5000/api/mcp/task/*)",
+      "Bash(curl -s http://localhost:5000/api/mcp/health)",
+      "Bash(python -c \"import requests; requests.post('http://localhost:5000/api/mcp/*')\")",
+      "Bash(python -c \"import requests; requests.get('http://localhost:5000/api/mcp/*')\")"
+    ],
+    "additionalDirectories": [
+      "e:\\projs\\codes\\rag_20260401\\rag",
+      "e:\\20260411\\rag\\rag\\.agents\\skills"
+    ]
+  },
+  "skills": {
+    "additionalSkillPaths": [
+      "e:\\20260411\\rag\\rag\\.agents\\skills"
+    ]
+  }
+}
